@@ -3,7 +3,9 @@ class Trivy < Formula
   homepage "https://github.com/knqyf263/trivy"
   url "https://github.com/knqyf263/trivy/releases/download/v0.0.1/trivy_0.0.1_macOS-64bit.tar.gz"
   version "0.0.1"
-  sha256 "034ce00ab4ef5cdff9c227e921c64cbf373a099273b63eab18fb891b3fa119d8"
+  sha256 "738716d656415a7c3f8fb686c34aabf2a234b48586e84a33ad07aa7f6b71c992"
+  
+  depends_on "rpm"
 
   def install
     bin.install "trivy"
