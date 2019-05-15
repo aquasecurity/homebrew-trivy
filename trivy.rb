@@ -3,7 +3,7 @@ class Trivy < Formula
   homepage "https://github.com/knqyf263/trivy"
   url "https://github.com/knqyf263/trivy/releases/download/v0.0.12/trivy_0.0.12_macOS-64bit.tar.gz"
   version "0.0.12"
-  sha256 "e0e63c25f8101f8a2f9b30948037c3f9fda2193bc728c4921ded957feebd551c"
+  sha256 "47756cd3a3c54a256c8259afe383a6931143aabc817d7de3277d407cab9d94b2"
   
   depends_on "rpm"
 
