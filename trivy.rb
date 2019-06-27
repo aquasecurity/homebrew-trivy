@@ -1,9 +1,9 @@
 class Trivy < Formula
   desc ""
   homepage "https://github.com/knqyf263/trivy"
-  url "https://github.com/knqyf263/trivy/releases/download/v0.1.2/trivy_0.1.2_macOS-64bit.tar.gz"
-  version "0.1.2"
-  sha256 "5ca4f7527caae3dbe92047e826235c718abccdf4273d7028955949aea83a845a"
+  url "https://github.com/knqyf263/trivy/releases/download/v0.1.3/trivy_0.1.3_macOS-64bit.tar.gz"
+  version "0.1.3"
+  sha256 "683f2ef80a56a48761a792d99637aaea9941a5288f86b02afb000b7afa87f932"
   
   depends_on "rpm"
 
