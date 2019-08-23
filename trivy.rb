@@ -1,9 +1,9 @@
 class Trivy < Formula
   desc ""
   homepage "https://github.com/aquasecurity/trivy"
-  url "https://github.com/aquasecurity/trivy/releases/download/v0.1.5/trivy_0.1.5_macOS-64bit.tar.gz"
-  version "0.1.5"
-  sha256 "e6b776ffdd951e271b0c29a0070870e414ea8c277311efccb185e00863226877"
+  url "https://github.com/aquasecurity/trivy/releases/download/v0.1.6/trivy_0.1.6_macOS-64bit.tar.gz"
+  version "0.1.6"
+  sha256 "6e68c26952de51f6c8d1e51c1502f639969e9cb338a2025806c2d8aef19f55dc"
   
   depends_on "rpm"
 
