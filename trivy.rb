@@ -6,10 +6,10 @@ class Trivy < Formula
 
   if OS.mac?
     url "https://github.com/aquasecurity/trivy/releases/download/v0.3.1/trivy_0.3.1_macOS-64bit.tar.gz"
-    sha256 "6b3225573a7a46aa5fa7ac52e643c427373aba8771721ec5e52154fb7ea36fb0"
+    sha256 "b8dcb5d9fa12dfc55f2dc76c9a34ad90e4eec270794c5713051374eb0c2e23fa"
   elsif OS.linux?
     url "https://github.com/aquasecurity/trivy/releases/download/v0.3.1/trivy_0.3.1_Linux-64bit.tar.gz"
-    sha256 "406c3447b80dfdcf0a302355e21869e3fa7f5a9a851d056916f8e4c945ec3a1b"
+    sha256 "89819e30e0edd271e7bca5c239f1fc8b6f9ca122d8a275ec90dc118220fb43b9"
   end
   
   depends_on "rpm"
