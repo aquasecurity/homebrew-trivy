@@ -2,14 +2,14 @@
 class Trivy < Formula
   desc ""
   homepage "https://github.com/aquasecurity/trivy"
-  version "0.3.1"
+  version "0.4.0"
 
   if OS.mac?
-    url "https://github.com/aquasecurity/trivy/releases/download/v0.3.1/trivy_0.3.1_macOS-64bit.tar.gz"
-    sha256 "b8dcb5d9fa12dfc55f2dc76c9a34ad90e4eec270794c5713051374eb0c2e23fa"
+    url "https://github.com/aquasecurity/trivy/releases/download/v0.4.0/trivy_0.4.0_macOS-64bit.tar.gz"
+    sha256 "58200560cadedf1d5f591918534f3558e1931c75e96b9d8e800642e1f1f5dcca"
   elsif OS.linux?
-    url "https://github.com/aquasecurity/trivy/releases/download/v0.3.1/trivy_0.3.1_Linux-64bit.tar.gz"
-    sha256 "89819e30e0edd271e7bca5c239f1fc8b6f9ca122d8a275ec90dc118220fb43b9"
+    url "https://github.com/aquasecurity/trivy/releases/download/v0.4.0/trivy_0.4.0_Linux-64bit.tar.gz"
+    sha256 "36e41458d7ab4f8e94d33597f6f5a3c69f022dff577bad06494c3d45e585ed35"
   end
   
   depends_on "rpm"
