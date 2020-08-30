@@ -2,21 +2,21 @@
 class Trivy < Formula
   desc ""
   homepage "https://github.com/aquasecurity/trivy"
-  version "0.10.2"
+  version "0.11.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aquasecurity/trivy/releases/download/v0.10.2/trivy_0.10.2_macOS-64bit.tar.gz"
-    sha256 "5aef6b9b397f7996daa9c4d41f201a418b1dbdd0348d72076e8a987e2e2517ac"
+    url "https://github.com/aquasecurity/trivy/releases/download/v0.11.0/trivy_0.11.0_macOS-64bit.tar.gz"
+    sha256 "b844075fed64775664892350a61cb06c8f391512e5e64162a1981b50e8fc5a40"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.10.2/trivy_0.10.2_Linux-64bit.tar.gz"
-      sha256 "8ae9f3ed2e70e681949e604bc4c094d346880b1d3370e65074cf56a77ea752ed"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.11.0/trivy_0.11.0_Linux-64bit.tar.gz"
+      sha256 "b5b9b9f0a008f449563b244067c8242cdf099c14f0f0a5e7a41a006ba74fe568"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aquasecurity/trivy/releases/download/v0.10.2/trivy_0.10.2_Linux-ARM64.tar.gz"
-        sha256 "fdea462a1764a873afbde0086a20407125ed6ad311e23796c5b3f727fdac22ee"
+        url "https://github.com/aquasecurity/trivy/releases/download/v0.11.0/trivy_0.11.0_Linux-ARM64.tar.gz"
+        sha256 "10a7963db58a675a5b3cf07c9fc54fb6a07397c55dfea95693f4f58e6ccbea2c"
       else
       end
     end
