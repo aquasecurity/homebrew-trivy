@@ -8,17 +8,17 @@ class Trivy < Formula
   version "0.27.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_macOS-ARM64.tar.gz"
-      sha256 "eb9774e4783e9e42239aa5c9cea39e638137ade34fc1e5a9fc6a9853f09cc229"
+    if Hardware::CPU.intel?
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_macOS-64bit.tar.gz"
+      sha256 "f975581bdf7f533181cde4cd2b6bf02b21bed49454b0a3094fcb1fa847661379"
 
       def install
         bin.install "trivy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_macOS-64bit.tar.gz"
-      sha256 "ddcfb8fb8c266722b69b6d9773684551cfd4433d0d7b4b690b502084adf5cb98"
+    if Hardware::CPU.arm?
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_macOS-ARM64.tar.gz"
+      sha256 "68f6948783d84ded6dee6865b01350dad501bfedc7680581b971ac08fb7d8b4f"
 
       def install
         bin.install "trivy"
@@ -27,17 +27,17 @@ class Trivy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_Linux-64bit.tar.gz"
-      sha256 "5dedcb4e1073d6bc179923c066b86959d22c88d51df38dd3fbb5c9c846d5aea9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_Linux-ARM64.tar.gz"
+      sha256 "cbf4ce52ff33726462b687968baf0b4acc48aed9e05fd9a26fde621f6ddd6401"
 
       def install
         bin.install "trivy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_Linux-ARM64.tar.gz"
-      sha256 "07435d5911bde53f70d1dc20bbf1e84e3643f01352649b73649234a50ae7f88b"
+    if Hardware::CPU.intel?
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.27.1/trivy_0.27.1_Linux-64bit.tar.gz"
+      sha256 "1046866a8c8bec84b9a56bee72d3345764842c97e241837f2a9a26830d5fa281"
 
       def install
         bin.install "trivy"
