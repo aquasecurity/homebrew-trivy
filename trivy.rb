@@ -5,20 +5,20 @@
 class Trivy < Formula
   desc "Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues"
   homepage "https://github.com/aquasecurity/trivy"
-  version "0.46.0"
+  version "0.46.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.0/trivy_0.46.0_macOS-ARM64.tar.gz"
-      sha256 "b5a8f853a132b18bff6aba3e20604f81de724defccd188b53fff1ed55be00918"
+    if Hardware::CPU.intel?
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.1/trivy_0.46.1_macOS-64bit.tar.gz"
+      sha256 "7c0f3a50d1a6016aa985a4029ceba4917f128d9aab77916ad0d0e8d62018e8ee"
 
       def install
         bin.install "trivy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.0/trivy_0.46.0_macOS-64bit.tar.gz"
-      sha256 "c2e498941fe8914c3b364ae982abb1dea362af0def7e6f15175166b3cfff5947"
+    if Hardware::CPU.arm?
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.1/trivy_0.46.1_macOS-ARM64.tar.gz"
+      sha256 "de9b2c58400e68e8bf025037b03569fb07402987822f1b3c0a0aece6d37992dd"
 
       def install
         bin.install "trivy"
@@ -28,16 +28,16 @@ class Trivy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.0/trivy_0.46.0_Linux-ARM64.tar.gz"
-      sha256 "6af0383e99b579203bba3286c780bebfc49a1efb66739bc6fefa3b0a779499b4"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.1/trivy_0.46.1_Linux-ARM64.tar.gz"
+      sha256 "cd357262e9ed198b65fba105432613229308f2c9220a740e3463ad297f83b2d8"
 
       def install
         bin.install "trivy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.0/trivy_0.46.0_Linux-64bit.tar.gz"
-      sha256 "d26b6a5b4445c4a7f99e104a8c47579aec150023fb927d55f8622e760c171af2"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.46.1/trivy_0.46.1_Linux-64bit.tar.gz"
+      sha256 "2b295d99db2fa0cbc2f55aca677851376d1a86cb0a2b5b4122b5cc56b62e0cc7"
 
       def install
         bin.install "trivy"
