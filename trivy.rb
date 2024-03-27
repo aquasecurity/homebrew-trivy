@@ -5,20 +5,20 @@
 class Trivy < Formula
   desc "Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues"
   homepage "https://github.com/aquasecurity/trivy"
-  version "0.50.0"
+  version "0.50.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.0/trivy_0.50.0_macOS-ARM64.tar.gz"
-      sha256 "967c0a906dc1b8d0ee6f0d766fe259342bc788a810289ccbf1faf1a973e35881"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_macOS-ARM64.tar.gz"
+      sha256 "82a5db5f489020f7e58489e630d16f355eeecdfe30b7d37853afd1c18c8449a8"
 
       def install
         bin.install "trivy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.0/trivy_0.50.0_macOS-64bit.tar.gz"
-      sha256 "45aec8f79b09a32e166d8b979347a836c58f0181b80d6da215c4bef409f18523"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_macOS-64bit.tar.gz"
+      sha256 "92a5b7ce397006684a5b3f607dccd502a3343b124cd082a409cd234236ebd6c1"
 
       def install
         bin.install "trivy"
@@ -28,16 +28,16 @@ class Trivy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.0/trivy_0.50.0_Linux-ARM64.tar.gz"
-      sha256 "628f164621c5fa7a7baa4ede54b6af77659207932152192f0cfd45219bd19a6f"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_Linux-ARM64.tar.gz"
+      sha256 "5f6fa3e33f379b420d77160ec33311f08d1ad44ee2ec7976f1e055a4e2c29742"
 
       def install
         bin.install "trivy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.0/trivy_0.50.0_Linux-64bit.tar.gz"
-      sha256 "2a3912956d68c4085bb8345381275797de31c9ac371d94804be72cfb948cca64"
+      url "https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_Linux-64bit.tar.gz"
+      sha256 "4cf907dfe770d81931ee56fb996d285edbf4e0d2308bcfd0f4a3d80e93b0f146"
 
       def install
         bin.install "trivy"
