@@ -5,20 +5,20 @@
 class Trivy < Formula
   desc "Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues"
   homepage "https://github.com/aquasecurity/trivy"
-  version "0.64.1"
+  version "0.65.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.64.1/trivy_0.64.1_macOS-64bit.tar.gz"
-      sha256 "107a874b41c1f0a48849f859b756f500d8be06f2d2b8956a046a97ae38088bf6"
+      url "https://get.trivy.dev/trivy?version=0.65.0&os=darwin&arch=amd64"
+      sha256 "b022f86ac91d1c4e79cc548f3e470880a2f8150a369058fbd055bee537aca798"
 
       def install
         bin.install "trivy"
       end
     end
     on_arm do
-      url "https://github.com/aquasecurity/trivy/releases/download/v0.64.1/trivy_0.64.1_macOS-ARM64.tar.gz"
-      sha256 "7489c69948cda032adc2862923222917cd025411abc4bba8517a8d581aed226c"
+      url "https://get.trivy.dev/trivy?version=0.65.0&os=darwin&arch=arm64"
+      sha256 "3076e27024b92d634fe09947934d36dc8b651a8539ff1d69b4cfac008dfb59ce"
 
       def install
         bin.install "trivy"
@@ -29,8 +29,8 @@ class Trivy < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aquasecurity/trivy/releases/download/v0.64.1/trivy_0.64.1_Linux-64bit.tar.gz"
-        sha256 "1a09d86667b3885a8783d1877c9abc8061b2b4e9b403941b22cbd82f10d275a8"
+        url "https://get.trivy.dev/trivy?version=0.65.0&os=linux&arch=amd64"
+        sha256 "f0c5e3c912e7f5194a0efc85dfd34c94c63c4a4184b2d7b97ec7718661f5ead2"
 
         def install
           bin.install "trivy"
@@ -39,8 +39,8 @@ class Trivy < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/aquasecurity/trivy/releases/download/v0.64.1/trivy_0.64.1_Linux-ARM64.tar.gz"
-        sha256 "a57d4d48a90f8ed875b821fc3078ba5a8572f86e90adfea0995cefd51d583bd7"
+        url "https://get.trivy.dev/trivy?version=0.65.0&os=linux&arch=arm64"
+        sha256 "013c67e6aff35429cbbc9f38ea030f5a929d128df08f16188af35ca70517330b"
 
         def install
           bin.install "trivy"
