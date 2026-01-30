@@ -5,20 +5,20 @@
 class Trivy < Formula
   desc "Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues"
   homepage "https://github.com/aquasecurity/trivy"
-  version "0.68.2"
+  version "0.69.0"
 
   on_macos do
     on_intel do
-      url "https://get.trivy.dev/trivy?version=0.68.2&os=darwin&arch=amd64"
-      sha256 "c0790530cd717b6bdd02ed437be0710f5c7043078fafaf6841be7c865bf251ce"
+      url "https://get.trivy.dev/trivy?version=0.69.0&os=darwin&arch=amd64"
+      sha256 "4264e4fcc73259de36a68c112a586d65bf6cd488ef2aea857f37d00d8cb5c4e6"
 
       def install
         bin.install "trivy"
       end
     end
     on_arm do
-      url "https://get.trivy.dev/trivy?version=0.68.2&os=darwin&arch=arm64"
-      sha256 "dfbe15ffe47426dad9fd3e0d52aeacf3dbbb25ca5dbc66049f5920834435988d"
+      url "https://get.trivy.dev/trivy?version=0.69.0&os=darwin&arch=arm64"
+      sha256 "bd35348d963d3f661ff4d7d138e65a75fedbfade0378689f3a349c824c6e5b75"
 
       def install
         bin.install "trivy"
@@ -29,8 +29,8 @@ class Trivy < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://get.trivy.dev/trivy?version=0.68.2&os=linux&arch=amd64"
-        sha256 "3d933bbc3685f95ec15280f620583d05d97ee3affb66944d14481d5d6d567064"
+        url "https://get.trivy.dev/trivy?version=0.69.0&os=linux&arch=amd64"
+        sha256 "fff5813d6888fa6f8bd40042a08c4f072b3e65aec9f13dd9ab1d7b26146ad046"
 
         def install
           bin.install "trivy"
@@ -39,8 +39,8 @@ class Trivy < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://get.trivy.dev/trivy?version=0.68.2&os=linux&arch=arm64"
-        sha256 "33c87995fd0c3d1559086c3e18fd3148051296dfd0ca2a67583eb64f89998c91"
+        url "https://get.trivy.dev/trivy?version=0.69.0&os=linux&arch=arm64"
+        sha256 "425e883f37cad0b512478df2803f58532e7d235267303375a3d0f97e4790a1ca"
 
         def install
           bin.install "trivy"
